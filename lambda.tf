@@ -2,7 +2,7 @@ resource "aws_lambda_function" "finance_lambda_function" {
   function_name = "finance-lambda-func"
   role          = aws_iam_role.lambda_rds_role.arn
   handler       = "index.handler"
-  runtime       = "python3.8"
+  runtime       = "python3.9"
   filename      = "./Deployment/LambdaFunction/package.zip"
   
   layers = [
@@ -31,7 +31,7 @@ resource "aws_lambda_layer_version" "finance_layer_package" {
   layer_name = "finance_layer_package"
   description = "Layer for shared dependencies"
 
-  compatible_runtimes = ["python3.8"]
+  compatible_runtimes = ["python3.9"]
   s3_bucket           = "lambdalayerpackages001"
   s3_key              = "FinanceData/layer.zip"
 

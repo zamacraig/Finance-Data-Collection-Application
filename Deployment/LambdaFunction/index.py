@@ -1,6 +1,7 @@
-import psycopg2
 import os
 from datetime import datetime
+import yfinance
+import yahoo_fin
 
 def handler(event, context):
     
