@@ -50,14 +50,16 @@ DB username
 DB password
 
 ## Usage
-Connect to the RDS Database
+
+### Connect to the RDS Database
 Retrieve the RDS endpoint from the AWS Management Console or Terraform output.
 
 Use a PostgreSQL client (e.g., psql, pgAdmin) to connect to the database:
 
 sh
 psql -h <rds-endpoint> -U admin -d mydatabase
-Add Tables to the Database
+
+### Add Tables to the Database
 Use the provided SQL script to create tables:
 
 sql
@@ -74,7 +76,7 @@ CREATE TABLE orders (
     order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     amount DECIMAL(10, 2) NOT NULL
 );
-Lambda Function
+### Lambda Function
 Deploy your Lambda function with the provided lambda.tf.
 
 Ensure the function can access the RDS database by setting environment variables.
@@ -82,5 +84,5 @@ Ensure the function can access the RDS database by setting environment variables
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request with your changes.
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
