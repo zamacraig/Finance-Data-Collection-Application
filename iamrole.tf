@@ -5,24 +5,26 @@ resource "aws_iam_role_policy" "lambda_rds_policy" {
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
-       {
-        Action = [
-          "rds:DescribeDBInstances",
-          "rds:Connect",
-          "rds:DescribeDBLogFiles",
-          "rds:DownloadDBLogFilePortion",
-        ],
-        Effect   = "Allow",
-        Resource = "*"
+      {
+        Effect: "Allow",
+        Action: "s3:PutObject",
+        Resource: "arn:aws:s3:::*/*"
       },
       {
-        "Effect": "Allow",
-        "Action": [
-            "ec2:CreateNetworkInterface",
-            "ec2:DescribeNetworkInterfaces",
-            "ec2:DeleteNetworkInterface"
+        "Effect" : "Allow",
+        "Action": [ 
+          "sns:Publish"
         ],
         "Resource": "*"
+      },
+      {
+        Effect: "Allow",
+        Action: [
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents"
+        ],
+        Resource: "arn:aws:logs:*:*:*"
       }
     ]
   })

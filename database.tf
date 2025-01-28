@@ -1,3 +1,4 @@
+/*
 resource "aws_db_instance" "finance-db-instance" {
     allocated_storage    = 10
     engine               = "postgres"
@@ -19,3 +20,4 @@ resource "aws_db_instance" "finance-db-instance" {
       Name = "Finance Database"
     }
   }
+  */

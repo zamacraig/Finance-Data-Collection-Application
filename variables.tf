@@ -35,7 +35,7 @@ variable "db_password" {
 }
 
 variable "db_port" {
-  default = 5432
+  default = 443
 }
 
 variable "http_port" {
@@ -46,6 +46,15 @@ variable "vpc_zone_1" {
   default = "us-east-1a"
 }
 
+variable "sns_servicename" {
+  default = "com.amazonaws.us-east-1.sns"
+}
+
 variable "vpc_zone_2" {
   default = "us-east-1b"
+}
+
+variable "sns_email" {
+  description = "SNS email subscription"
+  sensitive = true
 }
