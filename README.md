@@ -1,23 +1,10 @@
 # FinanceData
 This repository contains Terraform scripts and code for setting up and managing an AWS infrastructure, including an RDS PostgreSQL database and a Lambda function for finance-related operations.
 
-## Table of Contents
-Overview
-
-Architecture
-
-Setup
-
-Usage
-
-Contributing
-
-License
-
-Overview
+## Overview
 The FinanceData project is designed to demonstrate how to use Terraform to provision and manage AWS resources. It includes configurations for an RDS PostgreSQL database, a Lambda function with an associated layer, and the necessary networking components such as VPCs and subnets.
 
-Architecture
+## Architecture
 The architecture of this project includes the following components:
 
 VPC: Virtual Private Cloud to house all resources.
@@ -32,7 +19,7 @@ Lambda Function: Serverless function to interact with the RDS database.
 
 IAM Roles: Roles and policies to grant necessary permissions.
 
-Setup
+## Setup
 Prerequisites
 Terraform installed
 
@@ -62,7 +49,7 @@ DB username
 
 DB password
 
-Usage
+## Usage
 Connect to the RDS Database
 Retrieve the RDS endpoint from the AWS Management Console or Terraform output.
 
@@ -92,7 +79,7 @@ Deploy your Lambda function with the provided lambda.tf.
 
 Ensure the function can access the RDS database by setting environment variables.
 
-Contributing
+## Contributing
 Contributions are welcome! Please open an issue or submit a pull request with your changes.
 
 License
