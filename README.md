@@ -14,6 +14,10 @@ Welcome to the Finance Data Collection Application! 🚀 This application stream
 
 - 💡 Easy Customization: Flexibly configure collection parameters to suit your needs.
 
+## Architecture Diagram
+![image](https://github.com/user-attachments/assets/b409b783-9846-4469-be4c-9e5b31d1a2e3)
+
+
 ## Getting Started
 Follow these steps to set up and start using the application:
 
